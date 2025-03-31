@@ -16,3 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let audio = document.getElementById("bg-audio");
+    audio.play().catch(error => console.log("Autoplay blocked:", error));
+  });
