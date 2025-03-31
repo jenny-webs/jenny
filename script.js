@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-  document.addEventListener("DOMContentLoaded", function () {
+
+document.addEventListener("DOMContentLoaded", function () {
     let audio = document.getElementById("bg-audio");
-    audio.play().catch(error => console.log("Autoplay blocked:", error));
-  });
+    let playButton = document.getElementById("play-button");
+
+    playButton.addEventListener("click", function () {
+        audio.play();
+        playButton.style.display = "none"; // Hide the button after playing
+    });
+});
